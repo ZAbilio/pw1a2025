@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display flex
+    </title>
+    <style>
+        #primeira{
+            border: 5px solid #ff0000;
+            background-color: black;
+            color: #ffffff;
+            height: 150px;
+            font-size: 70pt;
+        }
+        #terceira{
+            background-color: #ffff00;
+            border: 10px double #008800;
+            height: 300px;
+            padding: 50px;
+            margin: 50px;
+            display: flex;
+            justify-content: end;
+        }
+        .subdiv{
+            background-color: #0000ff;
+            border: 10px solid #ff6500 ;
+            margin-bottom: 10px;
+            width: 200px;
+            height: 75px;
+
+        }
+        .navegaca{
+            background-color: 10px #77868c;
+        }
+    </style>
+</head>
+<body>
+   <div class="navegacao"> <h2>Cardápio</h2></div>
+    <lu>
+        <li>
+            <a href="index.html">
+                Clube
+            </a>
+        </li>
+        <li>
+            <a href="projeto.html">
+                Projeto
+            </a>
+        </li>
+        <li>
+            <a href="livro.html">
+                Livro
+            </a>
+        </li>
+        <li>
+            <a href="casos.html">
+                Casos / fontes
+            </a>
+        </li>
+        <li>
+          <a href="layout.html">
+              Cadastro
+          </a>
+      </li>
+    </lu>
+    <div id="primeira">primeira div</div>
+    <div id="segunda">segunda div</div>
+  <div id="terceira">
+        <div class="subdiv">sub div 1</div>
+        <div class="subdiv">sub div 2</div>
+        <div class="subdiv">sub div 3</div>
+    </div>
+</body>
+</html>
