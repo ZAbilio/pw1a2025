@@ -1,6 +1,6 @@
 .card{
-    border: 10px solid #cccccc;
-    width: 250px;
+
+    width: 550px;
     height: 550px;
     background-color: #ffffff;
     text-decoration: none;
@@ -21,7 +21,6 @@ justify-content: end;
 color: black;
 font-size: medium;
 }
-
 .link{
     text-decoration: none;
 }
@@ -42,4 +41,60 @@ font-size: medium;
 }
 .a2{
     border-bottom: 10px;
+}
+.cardapioValores{
+  
+    width: 75px;
+    border: 3px, #c7d4d9;
+    border: 2px, #77868c;
+    width: 300px;
+    margin-left: 50px;
+
+}
+.cardapioNavegacao{
+ margin-left: 50px;
+}
+.cardapioTotal{
+   display: flex;
+    border: 2px solid #77868c;
+    padding: 1px;
+    width: 500px;
+    height: 500px;
+
+}
+.tituloCardapioValores{
+    text-align: start;
+    font-size: small;
+
+    color: #000000;
+    flex-wrap: nowrap;
+    width: 300px;
+
+
+}
+.itensCardapio{
+    font-size: medium;
+    text-align: start;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: px;
+    
+}
+.card{
+}
+.linksNavegacao{
+    margin-left: 50px;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+.nameCardapio{
+    text-align: center;
+}
+.space{
+    height: 30px;
+    weight
+}
+.a+{
+    width: 500px;
+    height: 500px;
 }
