@@ -1,0 +1,6 @@
+//var nome= prompt("digite seu nome ")
+//alert("seu nome é: "+nome)
+var a= prompt("digite o primeiro numero: ") 
+var b = prompt("figite o segundo numero: ")
+var c= prompt("digite o terceiro numero: ")
+alert(a+b+c)
