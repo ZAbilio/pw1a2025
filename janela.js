@@ -1,7 +1,56 @@
+var nome = "enzo" 
+var idade ="90"
+var idadePassada= 89
+var anoPassado = 2024
+var anoAtual="2025"
+var luzNaoApagada= true
+var semNamorado= true
+var enzo=17
+var teste_do_prof= true
+var temPizzas= false
 //var nome= prompt("digite seu nome ")
 //alert("seu nome é: "+nome)
-var a= prompt(Number("digite o primeiro numero: "));
-var b = prompt(Number("figite o segundo numero: "));
-var c= prompt(Number("digite o terceiro numero: "));
-var soma= ( a+b+c);
-alert(a+b+c)
+/*
+var a= Number(prompt("digite o primeiro numero: "));
+var b = Number(prompt("figite o segundo numero: "));
+var c= Number(prompt("digite o terceiro numero: "));*/
+//alert( Number(prompt("digite o primeiro numero: "))+ Number(prompt("digite o primeiro numero: "))+Number(prompt("digite o primeiro numero: ")))
+/*var numero=Number(prompt("informe um numero: "))
+if(numero %2==0){
+alert("o numero"+numero+ "é par")
+}else{
+alert("o numero"+numero+ "é impar")
+}*/
+
+/*var idade= Number(prompt("informe a sua idade: "));
+if(idade >= 18){
+alert("sua idade "+idade+" esta permitindo a compra de metanol e dirigir alcolizado")
+}else{
+alert("sua idade "+idade+" não esta permitindo a compra de metanol e dirigir alcolizado")
+}*/
+
+/*var tempo= true 
+var dinheiro= true 
+if(tempo== true && dinheiro==true ){
+    alert("viajo")
+}*/
+/*var namorada= false
+if(!(namorada==false )){
+
+}else{
+alert("o '!' inverte o valor booleano")
+}*/
+
+var saldoAtual= number(prompt("informe o valor que você tem para viajar: "));
+if(saldoAtual<=499){
+alerte("Você não vai viajar!")
+}else if(saldoAtual==500 ){
+alert("voce consegue viajar para SP!");
+}else if( saldoAtual>=501 && saldoAtual<=700){
+alert("voce consegue viajar até RJ!");
+}else if( saldoAtual>=701 && saldoAtual<=100){
+alert("voce consegue viajar até MG!");
+}else{
+alert("voce consegue viajar até o Nordeste!");
+}
+
