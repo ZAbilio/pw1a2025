@@ -43,7 +43,7 @@ var dinheiro= true
     alert("o '!' inverte o valor booleano")
    }*/
 
- var saldoAtual= number(prompt("informe o valor que você tem para viajar: "));
+ /*var saldoAtual= number(prompt("informe o valor que você tem para viajar: "));
  if(saldoAtual<=499){
     alerte("Você não vai viajar!")
  }else if(saldoAtual==500 ){
@@ -54,7 +54,17 @@ var dinheiro= true
     alert("voce consegue viajar até MG!");
  }else{
     alert("voce consegue viajar até o Nordeste!");
- }
-
+ }*/
+    
+    var v=Number(prompt("Informe a tabuada: "));
+    //var n=Number(prompt("informe até onde gostario de ver a tabuada: "))
+    document.write("<h3> Tabuada do "+v+"</h3>")
+ for(var i=1; i<=10;i++){
+    if (i%2==0){
+        document.write(v+"x"+i+"="+(v*i)+"<br>");
+    }else{
+        document.write(v+"x"+i+"="+"<br>");
+    }
+ } 
 
 </script>
