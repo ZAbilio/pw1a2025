@@ -1,84 +1,149 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartela de bingo
-    </title>
+    <title>Cartela de Bingo</title>
     <style>
-        body,html{
-            margin: 0%;
-            padding: 0%;
+        body,
+        html {
+            margin: 0;
+            padding: 0;
             height: 100%;
-            background-color: #c7d4d9;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #FFFFFF;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            display:flex;
             justify-content: center;
-            align-items: center;
+            align-items:center;
         }
         th{
             font-size: 30pt;
-          padding: 10px;
-
-        }
-        td{
-            border: 1px solid rgb(0, 0, 0);
             padding: 10px;
-            border-radius: 10px;
-            text-align: center;
         }
-        table{
-            border: 8px solid  rgb(206, 236, 40);
-            background-color: rgb(206, 236, 40);
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 20px;
-            padding-bottom: 20px;
+        td
+        {
+            font-size: 30pt;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid rgb(0, 0, 0);
+        }
+       
+       
+        table {
+           
+            background-color: #FFFF00;
+            padding-bottom: 50px;
+            padding-left: 25px;
+            padding-right: 25px;
+           
+ 
+ 
         }
     </style>
 </head>
+ 
 <body>
     <table>
-    <thead>
-        <div class="pingo">
-     <th>B</th>
-     </div>
-     <div class="pingo2"><th>I</th>
-     <th>N</th>
-     <th>G</th></div>
-     <div class="pingo3"><th>O</th>
-     </div>
-    </thead>
-    <tbody>
-        <tr>
-        <td>11</td>
-        <td>24</td>
-        <td>40</td>
-        <td>60</td>
-        <td>62</td>
-        </tr>
-        <tr>
-           <td>1</td> 
-           <td>30</td> 
-           <td><img src="https://agrafica.com.br/wp-content/uploads/2016/01/resolucao_300dpi.jpg" width="50" height="50"/></td> 
-           <td>48</td> 
-           <td>69</td> 
-        </tr>
-        <tr>
-            <td>15</td> 
-            <td>17</td> 
-            <td>31</td> 
-            <td>54</td> 
-            <td>71</td> 
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>18</td>
-            <td>33</td>
-            <td>56</td>
-            <td>75</td>
-        </tr>
-    </tbody>
-</table>
-</body>
+        <thead>
+            <tr>
+                    <th>B</th>
+                    <th>I</th>
+                    <th>N</th>
+                    <th>G</th>
+                    <th>O</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border: 1px solid #000000;">
+                <td>11</td><!--Coluna B-->
+                <td>24</td><!--Coluna I-->
+                <td>40</td><!--Coluna N-->
+                <td>60</td><!--Coluna G-->
+                <td>62</td><!--Coluna O-->
+            </tr>
+            <tr>
+                <td>9</td><!--Coluna B-->
+                <td>26</td><!--Coluna I-->
+                <td>41</td><!--Coluna N-->
+                <td>47</td><!--Coluna G-->
+                <td>63</td><!--Coluna O-->
+            </tr>
+            <tr>
+                <td>1</td><!--Coluna B-->
+                <td>30</td><!--Coluna I-->
+                <td></td><!--Coluna N-->
+                <td>48</td><!--Coluna G-->
+                <td>69</td><!--Coluna O-->
+            </tr>
+            <tr>
+                <td>15</td><!--Coluna B-->
+                <td>17</td><!--Coluna I-->
+                <td>31</td><!--Coluna N-->
+                <td>54</td><!--Coluna G-->
+                <td>71</td><!--Coluna O-->
+            </tr>
+            <tr>
+                <td>7</td><!--Coluna B-->
+                <td>18</td><!--Coluna I-->
+                <td>33</td><!--Coluna N-->
+                <td>56</td><!--Coluna G-->
+                <td>75</td><!--Coluna O-->
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var B = [] // 1-15
+        var I = [] // 16-30
+        var N = [] // 31-45
+        var G = [] // 46-60
+        var O = [] // 61-75
+        var SORTEIO = [] //1-75
+ 
+        for(var i = 1; i<76; i++)
+        {
+            SORTEIO.push(i)
+        }
+ 
+        for(var i = 1; i <= 15; i++)
+        {
+            B.push(i)
+        }
+        for(var i = 16; i <= 30; i++)
+        {
+            I.push(i)
+        }
+        for(var i = 31; i <= 45; i++)
+        {
+            N.push(i)
+        }
+        for(var i = 46; i <= 60; i++)
+        {
+            G.push(i)
+        }
+        for(var i = 61; i <= 75; i++)
+        {
+            O.push(i)
+        }
+ 
+        document.write("<h1>"+ I[8]+ " </h1>")
+        /*
+            Usando a lista N mostre apenas os números pares
+        */
+       for(var i = 0; i<15; i++)
+       {
+            if(N[i] % 2 == 0)
+            {
+                document.write("O numero é: "+N[i]+"<br>")
+            }
+       }
+       l=[ 31, 50, 47, 29, 10, 28, 35, 12, 22]
+       for(var j=14;j<=0;j--){
+        if(I[j])
+        document.write()
+       }
 
+    </script>
+</body>
 </html>
