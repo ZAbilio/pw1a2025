@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartela de Bingo</title>
+
     <style>
         body,
         html {
@@ -56,40 +57,44 @@
             </tr>
         </thead>
         <tbody>
+           
             <tr style="border: 1px solid #000000;">
-                <td>11</td><!--Coluna B-->
-                <td>24</td><!--Coluna I-->
-                <td>40</td><!--Coluna N-->
-                <td>60</td><!--Coluna G-->
-                <td>62</td><!--Coluna O-->
+                <div >
+                <td onclick="Marcar(this)">11</td><!--Coluna B-->
+                <td onclick="Marcar(this)">24</td><!--Coluna I-->
+                <td onclick="Marcar(this)">40</td><!--Coluna N-->
+                <td onclick="Marcar(this)">60</td><!--Coluna G-->
+                <td onclick="Marcar(this)">62</td><!--Coluna O-->
+            </div>
+            </tr>
+      
+            <tr>
+                <td onclick="Marcar(this)">9</td><!--Coluna B-->
+                <td onclick="Marcar(this)">26</td><!--Coluna I-->
+                <td onclick="Marcar(this)">41</td><!--Coluna N-->
+                <td onclick="Marcar(this)">47</td><!--Coluna G-->
+                <td onclick="Marcar(this)">63</td><!--Coluna O-->
             </tr>
             <tr>
-                <td>9</td><!--Coluna B-->
-                <td>26</td><!--Coluna I-->
-                <td>41</td><!--Coluna N-->
-                <td>47</td><!--Coluna G-->
-                <td>63</td><!--Coluna O-->
+                <td onclick="Marcar(this)">1</td><!--Coluna B-->
+                <td onclick="Marcar(this)">30</td><!--Coluna I-->
+                <td onclick="Marcar(this)"></td><!--Coluna N-->
+                <td onclick="Marcar(this)">48</td><!--Coluna G-->
+                <td onclick="Marcar(this)">69</td><!--Coluna O-->
+            </tr>
+            <tr >
+                <td onclick="Marcar(this)">15</td><!--Coluna B-->
+                <td onclick="Marcar(this)">17</td><!--Coluna I-->
+                <td onclick="Marcar(this)">31</td><!--Coluna N-->
+                <td onclick="Marcar(this)">54</td><!--Coluna G-->
+                <td onclick="Marcar(this)">71</td><!--Coluna O-->
             </tr>
             <tr>
-                <td>1</td><!--Coluna B-->
-                <td>30</td><!--Coluna I-->
-                <td></td><!--Coluna N-->
-                <td>48</td><!--Coluna G-->
-                <td>69</td><!--Coluna O-->
-            </tr>
-            <tr>
-                <td>15</td><!--Coluna B-->
-                <td>17</td><!--Coluna I-->
-                <td>31</td><!--Coluna N-->
-                <td>54</td><!--Coluna G-->
-                <td>71</td><!--Coluna O-->
-            </tr>
-            <tr>
-                <td>7</td><!--Coluna B-->
-                <td>18</td><!--Coluna I-->
-                <td>33</td><!--Coluna N-->
-                <td>56</td><!--Coluna G-->
-                <td>75</td><!--Coluna O-->
+                <td  onclick="Marcar(this)">7</td><!--Coluna B-->
+                <td  onclick="Marcar(this)">18</td><!--Coluna I-->
+                <td  onclick="Marcar(this)">33</td><!--Coluna N-->
+                <td  onclick="Marcar(this)">56</td><!--Coluna G-->
+                <td  onclick="Marcar(this)">75</td><!--Coluna O-->
             </tr>
         </tbody>
     </table>
@@ -148,7 +153,8 @@
             }
         }
 
-            /////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+
             var numero=0;
             var lista=[];
             while (numero<=100){
@@ -162,7 +168,76 @@
             }
         }
 
+///////////////////////////////////////////////////////////////////////////////////////
+
+        var B = PreencherLista (1,15)
+        var I = PreencherLista (16,30)
+        var N = PreencherLista (31,45)
+        var G = PreencherLista (46,60)
+        var O = PreencherLista (61,75)
+        var SORTEIO = PreencherLista(1,75)
+
+        function PreencherLista(inicial,final)
+        {
+            var listaRetorno = []
+            for (var i = inicial; i<= final; i++){
+                listaRetorno.push(i)
+            }
+            return listaRetorno
+        }
+        function ParOuImpar (numero){
+            if (numero%2==0) {
+                return "par"
+            }else{
+                return "impar"
+            }
+        }
+        function mostrarlista (lista){
+            return document.write("<h1>"+ lista + "</h1> <br>")
+        }
+        function mostrarlistadetalhada(lista){
+            for (var i = 0; i < lista.length; i++)
+            {
+                return document.write ("<h1>" + lista[i] + "</h1>")
+            }
+        }
+        mostrarlistadetalhada (B)
+        mostrarlistadetalhada (I)
+        mostrarlistadetalhada (N)
+        mostrarlistadetalhada (G)
+        mostrarlistadetalhada (O)
+        mostrarlistadetalhada (SORTEIO)
+        
+        function Marcar(elementoClicado){
+            elementoClicado.innerHTML= numeroAleatorio()
+           // alert(elementoClicado.innerText)
+         //   elementoClicado.style.backgroundColor = "yellow"
+          //  if(    elementoClicado.style.backgroundColor == "yellow")
+          //  {
+           //         elementoClicado.style.backgroundColor = "red"
+           // }else{
+           //         elementoClicado.style.backgroundColor = "yellow"
+          //  }
+          
+        }
+        function numeroAleatorio(min, max){
+            var numero = Math.random()*75
+            numero= Math.floor(numero)
+            if(numero>= min){
+                return numero
+            }else{
+                return numeroAleatorio(min, max)
+            }
+        }
+////////////////////////////////////////////////////
+l1=[]
+l2=[]
+l3=[]
+
+
+
 
     </script>
+
 </body>
 </html>
