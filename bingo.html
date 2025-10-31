@@ -169,7 +169,7 @@
         }
 
 ///////////////////////////////////////////////////////////////////////////////////////
-
+     
         var B = PreencherLista (1,15)
         var I = PreencherLista (16,30)
         var N = PreencherLista (31,45)
@@ -208,27 +208,83 @@
         mostrarlistadetalhada (O)
         mostrarlistadetalhada (SORTEIO)
         
-        function Marcar(elementoClicado){
-            elementoClicado.innerHTML= numeroAleatorio()
+        function MarcarB(elementoClicado){
+            elementoClicado.innerHTML= numeroAleatorioB()
            // alert(elementoClicado.innerText)
-         //   elementoClicado.style.backgroundColor = "yellow"
-          //  if(    elementoClicado.style.backgroundColor == "yellow")
-          //  {
-           //         elementoClicado.style.backgroundColor = "red"
-           // }else{
-           //         elementoClicado.style.backgroundColor = "yellow"
-          //  }
+         elementoClicado.style.backgroundColor = "yellow"
+          if(    elementoClicado.style.backgroundColor == "yellow")
+            {
+                    elementoClicado.style.backgroundColor = "red"
+            }else{
+                   elementoClicado.style.backgroundColor = "yellow"
+           }
           
         }
-        function numeroAleatorio(min, max){
-            var numero = Math.random()*75
+        function Marcar(elementoClicado){
+            elementoClicado.innerHTML= numeroAleatorio()
+        }
+        function Marcar(elementoClicado){
+            elementoClicado.innerHTML= numeroAleatorio()
+         
+          
+        }
+        function Marcar(elementoClicado){
+            elementoClicado.innerHTML= numeroAleatorio()
+        
+          
+        }
+        function Marcar(elementoClicado){
+            elementoClicado.innerHTML= numeroAleatorio()
+        
+          
+        }
+        
+        function numeroAleatorioB(min, max){
+            var numero = Math.random()*15
             numero= Math.floor(numero)
-            if(numero>= min){
+            if(numero>= 1){
                 return numero
             }else{
                 return numeroAleatorio(min, max)
             }
         }
+        function numeroAleatorioI(min, max){
+            var numero = Math.random()*30
+            numero= Math.floor(numero)
+            if(numero>= 16){
+                return numero
+            }else{
+                return numeroAleatorio(min, max)
+            }
+        }
+        function numeroAleatorioN(min, max){
+            var numero = Math.random()*45
+            numero= Math.floor(numero)
+            if(numero>= 31){
+                return numero
+            }else{
+                return numeroAleatorio(min, max)
+            }
+        }
+        function numeroAleatorioG(min, max){
+            var numero = Math.random()*60
+            numero= Math.floor(numero)
+            if(numero>= 46){
+                return numero
+            }else{
+                return numeroAleatorio(min, max)
+            }
+        }
+        function numeroAleatorioO(min, max){
+            var numero = Math.random()*75
+            numero= Math.floor(numero)
+            if(numero>= 61){
+                return numero
+            }else{
+                return numeroAleatorio(min, max)
+            }
+        }
+       
 ////////////////////////////////////////////////////
 l1=[]
 l2=[]
