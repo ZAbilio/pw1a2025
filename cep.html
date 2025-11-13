@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta cep</title>
+    <link rel="stylesheet" href="cep.css">
+</head>
+<body>
+    <div class="formularios">
+        <h1>Consulte seu CEP</h1>
+        <label id="labelcep">CEP</label>
+        <input type="text" id="cep"/>
+        <label>Endereço</label>
+        <input type="text" id="endereço"/>
+        <label>Bairro</label>
+        <input type="text" id="bairro"/>
+        <label>Cidade</label>
+        <input type="text" id="cidade"/>
+        <label>Estado</label>
+        <input type="text" id="estado"/>
+        <button onclick="verdados()">
+           consultar
+        </button>
+
+    </div>
+    <script>
+        function verdados()
+        {
+            var cep = document.getElementById("cep")
+            var endereço = document.getElementById("endereço")
+            var bairro = document.getElementById("bairro")
+            var cidade = document.getElementById("cidade")
+            var estado = document.getElementById("estado")
+            var  labelcep = document.getElementById("labelcep")
+           // estado.value = "oiiiiiiiii"
+            cidade.style.backgroundColor= "red"
+            bairro.style.border="2px solid blue"
+            endereço.type="number"
+            if(cep.value==""){
+                labelcep.innerHTML ="CEP - <span class='erro'> esse campo não pode estar vazio <span/>"
+
+               // cep.style.border="2px solid red"
+               // cep.focus()
+                return false;
+            }
+            else{
+                 labelcep.innerHTML ="CEP"
+                 //cep.style.border="1px solid black"
+            }
+           // cep.style.width="350px"
+           // cep.style.height="200px"
+        }
+    </script>
+</body>
+</html>
