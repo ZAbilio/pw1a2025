@@ -12,7 +12,7 @@
         <label id="labelcep">CEP</label>
         <input type="text" id="cep"/>
         <label>Endereço</label>
-        <input type="text" id="endereço"/>
+        <input type="text" id="endereco"/>
         <label>Bairro</label>
         <input type="text" id="bairro"/>
         <label>Cidade</label>
@@ -28,26 +28,38 @@
         function verdados()
         {
             var cep = document.getElementById("cep")
-            var endereço = document.getElementById("endereço")
+            var endereco = document.getElementById("endereco")
             var bairro = document.getElementById("bairro")
             var cidade = document.getElementById("cidade")
             var estado = document.getElementById("estado")
-            var  labelcep = document.getElementById("labelcep")
+          //  var  labelcep = document.getElementById("labelcep")
+
+            var url = "viacep.com.br/ws/"+ cep.value +"/json/"
+            fetch(url)
+            .then((response)=> response.json())
+            .then((dados)=>{
+                endereco.value = dados.logradouro
+                bairro.value = dados.bairro
+                cidade.value= dados.localidade
+                estado.value= dados.estado
+            })
+
+
            // estado.value = "oiiiiiiiii"
-            cidade.style.backgroundColor= "red"
-            bairro.style.border="2px solid blue"
-            endereço.type="number"
-            if(cep.value==""){
-                labelcep.innerHTML ="CEP - <span class='erro'> esse campo não pode estar vazio <span/>"
+          //  cidade.style.backgroundColor= "red"
+          //  bairro.style.border="2px solid blue"
+           // endereço.type="number"
+          //  if(cep.value==""){
+           //     labelcep.innerHTML ="CEP - <span class='erro'> esse campo não pode estar vazio <span/>"
 
                // cep.style.border="2px solid red"
                // cep.focus()
-                return false;
-            }
-            else{
-                 labelcep.innerHTML ="CEP"
+           //     return false;
+         //   }
+         //   else{
+          //       labelcep.innerHTML ="CEP"
                  //cep.style.border="1px solid black"
-            }
+         //   }
            // cep.style.width="350px"
            // cep.style.height="200px"
         }
